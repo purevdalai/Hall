@@ -1,29 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
-import getEvents from './actions/getEvents'; 
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Edit from './components/App';
 
 class App extends Component {
-
-  constructor() {
-    super();
-    this.state = {events:[{}]};
+    render() {
+      return (
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Edit} />
+          </Switch>
+        </BrowserRouter>);
+    }
   }
-
-  handler = function(res) {
-    this.setState({events: res.data.event});
-  }
-
-  componentDidMount() {
-    getEvents(this.handler.bind(this));
-  }
-
-  render() {
-    console.log(this.state.events);
-    return (
-      <div className="App">
-      </div>
-    );
-  }
-}
-
-export default App;
+  
+  export default App;
