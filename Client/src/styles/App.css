@@ -1,0 +1,46 @@
+.cd-schedule {
+    position: relative;
+    width: 1000px;
+    height: 1002px;
+}
+
+.cd-schedule .cd-row {
+    width: calc(100% / 8);
+    float: left;
+    border: 1px solid #eaeaea;
+}
+
+.cd-schedule .cd-row .cd-box {
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    padding: 0;
+    height: 50px;
+    display: table;
+}
+
+.cd-schedule .cd-row .cd-box>span {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 .5em;
+}
+
+.cd-schedule .cd-row .cd-event {
+    position: absolute;
+    height: 50px;
+    display: none;
+    /* overflow: auto; */
+    margin-top: -50px;
+    color: white;
+}
+
+.cd-schedule .cd-row .cd-event .cd-description {
+    display: table-cell;
+    vertical-align: middle;
+    height: 48px;
+}
+
+.cd-schedule .cd-row .cd-event .cd-resizer {
+    border: 2px solid #eaeaea;
+    cursor: row-resize;
+}
+

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Schedule from './Schedule';
 import getEvents from './../actions/getEvents'; 
-import './../styles/App.css';
+import './../styles/AppOld.css';
 
 class App extends Component {
 
@@ -11,27 +11,16 @@ class App extends Component {
   }
 
   handler = function(res) {
-    this.setState({events: res.data});
+    this.setState({events: res.data.event});
   }
 
-  /***
-   * System -n ogogdoluudee tatan avah
-   */
   componentDidMount() {
-    /** request shidej event-n ogogdluudee tatan avah */
     getEvents(this.handler.bind(this));
     this.setState({
       times: ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00',
               '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30',
               '16:00', '16:30', '17:00', '17:30', '18:00'],
-      week: [' ' ,'Даваа', 'Мягмар', 'Лхагва', 'Пүрэв', 'Баасан', 'Бямба', 'Ням']});
-  }
-
-  /**
-   * shine event nemeh
-   */
-  addEvent(events) {
-    this.setState({events:events});
+      week: ['Даваа', 'Мягмар', 'Лхагва', 'Пүрэв', 'Баасан', 'Бямба', 'Ням']});
   }
 
   render() {
@@ -40,13 +29,9 @@ class App extends Component {
     const week = this.state.week;
 
     return (
-      <div className="container">
-        <Schedule 
-          addEvent={this.addEvent.bind(this)}
-          events={events} 
-          times={times} 
-          week={week} />
-      </div>  
+      <div className="container cd-schedule">
+        <Schedule events={events} times={times} week={week} />
+      </div>
     );
   }
 }

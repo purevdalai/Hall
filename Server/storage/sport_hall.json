@@ -1,18 +1,16 @@
-{
-    "event": [
-        {
-            "id": 1,
-            "day": 2,
-            "description": "Halo!",
-            "start": "12:30",
-            "end": "14:30"
-        },
-        {
-            "id": 2,
-            "day": 5,
-            "description": "Hi",
-            "start": "15:30",
-            "end": "16:30"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "day": 2,
+        "description": "Halo!",
+        "start": "12:30",
+        "end": "14:30"
+    },
+    {
+        "id": 2,
+        "day": 5,
+        "description": "Hi",
+        "start": "15:30",
+        "end": "16:30"
+    }
+]
