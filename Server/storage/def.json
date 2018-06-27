@@ -1,0 +1,22 @@
+[{
+    "id": 1,
+    "day": 2,
+    "description": "Tennis train",
+    "start": "12:30",
+    "end": "14:30",
+    "color": "#49D530"
+}, {
+    "id": 2,
+    "day": 7,
+    "description": "Volleyball train",
+    "start": "15:30",
+    "end": "16:30",
+    "color": "#0F50B7"
+}, {
+    "id": 3,
+    "day": 3,
+    "description": "Basketball train",
+    "start": "15:30",
+    "end": "16:30",
+    "color": "#4B3568"
+}]
