@@ -71,6 +71,7 @@
     height: 90%;
     margin-top: -20px;
     overflow: hidden;
+    resize: none;
 }
 
 .cd-schedule .cd-row .cd-event .cd-description label {
