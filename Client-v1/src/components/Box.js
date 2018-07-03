@@ -43,7 +43,8 @@ class Box extends Component {
             const event = {
                 id: events.length + 1,
                 day: day,
-                description: 'Untitled',
+                name: 'Untitled',
+                phone: 'Untitled',
                 start: time,
                 end: nextTime(time),
                 color: color
@@ -75,7 +76,7 @@ class Box extends Component {
     addNote(e) {
         const value = e.target.value + '';
         const event = this.state.event;
-        event.description = value;
+        event.name = value;
         this.setState({event:event});
         this.props.editEvent(this.state.event);
     }
@@ -137,7 +138,7 @@ class Box extends Component {
                         onMouseDown={this.addNote.bind(this)}
                         className="cd-description" 
                         ref='desc'>
-                            {this.state.event.description}
+                            {this.state.event.name}
                     </div>
                     <div 
                         onMouseDown={this.resize.bind(this)}

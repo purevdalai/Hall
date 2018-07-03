@@ -11,7 +11,6 @@ router.get('/event', function (req, res, next) {
   fs.readFile(filePath, "UTF-8", function (err, data) {
     if (err)
       return res.send(err);
-
     res.send(data);
   });
 });
@@ -68,7 +67,10 @@ router.post('/edit' , function(req, res, next){
 function getIndex(events, event) {
   var index = -1;
   for (var i = 0; i < events.length; i++) {
-    if (events[i].id == event.id) {
+    if (
+        events[i].name == event.name && 
+        events[i].phone == event.phone
+    ) {
       index = i;
       break;
     }
